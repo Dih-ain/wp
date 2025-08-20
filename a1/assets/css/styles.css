@@ -1,0 +1,66 @@
+:root{
+  --primary:#cd4f07;
+  --secondary:#6b5b95;
+  --soft:#fff5f8;
+  --text:#333333;
+  --grad:#f6978e;
+}
+
+html,body{
+  font-family:"Ysabeau SC",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
+  color:var(--text);
+  background-color:#fff;
+}
+
+/* Headings use Libre Baskerville */
+h1,h2,h3,h4,h5,h6{font-family:"Libre Baskerville",serif;}
+
+.topbar{
+  background-color:var(--primary);
+}
+.topbar .nav-link,
+.topbar .navbar-brand{color:#fff;}
+.topbar .nav-link.active,
+.topbar .nav-link:hover{opacity:.9;color:#fff;}
+
+.brand-text{font-weight:700; letter-spacing:.3px;}
+
+.bg-soft{background-color:var(--soft);}
+.section-title{font-size:1.75rem; margin-bottom:1rem;}
+
+.search-input{
+  border-radius:999px 0 0 999px;
+  border:0;
+  padding-left:.9rem;
+}
+.btn-search{
+  border-radius:0 999px 999px 0;
+  background:#fff; color:var(--primary);
+  border:0;
+}
+.btn-search .material-icons{vertical-align:middle;}
+
+.skill-card{border:0;}
+.btn-accent{
+  background: linear-gradient(135deg, var(--primary), var(--grad));
+  color:#fff; border:0;
+}
+.btn-accent:hover{opacity:.92; color:#fff;}
+.btn-outline-accent{color:var(--primary); border-color:var(--primary);}
+.btn-outline-accent:hover{background:var(--primary); color:#fff;}
+
+.table-accent{background:var(--secondary);}
+.table a{color:var(--primary); text-decoration:none;}
+.table a:hover{text-decoration:underline;}
+
+/* Footer */
+.footer-grad{
+  background: linear-gradient(180deg, rgba(246,151,142,.35), rgba(205,79,7,.85));
+  color:#fff;
+}
+
+/* Gallery accessibility */
+a.gallery-link:focus-visible{outline:3px solid var(--primary); outline-offset:4px;}
+
+/* Small utility */
+.card .small{font-size:.85rem;}
