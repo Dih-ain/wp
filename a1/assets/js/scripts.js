@@ -58,3 +58,15 @@ function validateImageExtension(inputEl) {
   }
   return ok;
 }
+
+
+
+    const galleryModal = document.getElementById('galleryModal');
+    const galleryModalImage = document.getElementById('galleryModalImage');
+
+    galleryModal.addEventListener('show.bs.modal', event => {
+      const trigger = event.relatedTarget;
+      const imageSrc = trigger.getAttribute('data-bs-image');
+      galleryModalImage.src = imageSrc;
+    });
+
