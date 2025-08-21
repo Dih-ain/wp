@@ -6,14 +6,33 @@
   --grad:#f6978e;
 }
 
-html,body{
-  font-family:"Ysabeau SC",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial;
-  color:var(--text);
-  background-color:#fff;
+body {
+  font-family: 'Ysabeau SC', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif;
 }
 
-/* Headings use Libre Baskerville */
-h1,h2,h3,h4,h5,h6{font-family:"Libre Baskerville",serif;}
+.skill-link {
+  color: #cd4f07;
+  text-decoration: none;
+}
+.skill-link:hover {
+  text-decoration: underline;
+}
+
+.btn-accent {
+  background: #cd4f07;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 0.9rem;
+  border: none;
+}
+.btn-accent:hover {
+  background: #f6978e;
+  color: #fff;
+}
 
 .topbar{
   background-color:var(--primary);
@@ -41,11 +60,7 @@ h1,h2,h3,h4,h5,h6{font-family:"Libre Baskerville",serif;}
 .btn-search .material-icons{vertical-align:middle;}
 
 .skill-card{border:0;}
-.btn-accent{
-  background: linear-gradient(135deg, var(--primary), var(--grad));
-  color:#fff; border:0;
-}
-.btn-accent:hover{opacity:.92; color:#fff;}
+
 .btn-outline-accent{color:var(--primary); border-color:var(--primary);}
 .btn-outline-accent:hover{background:var(--primary); color:#fff;}
 
@@ -59,8 +74,46 @@ h1,h2,h3,h4,h5,h6{font-family:"Libre Baskerville",serif;}
   color:#fff;
 }
 
-/* Gallery accessibility */
+
 a.gallery-link:focus-visible{outline:3px solid var(--primary); outline-offset:4px;}
 
-/* Small utility */
+
 .card .small{font-size:.85rem;}
+
+
+.bg-accent {
+  background-color: #cd4f07 !important;
+}
+
+
+.text-accent {
+  color: #cd4f07;
+  text-decoration: none;
+}
+.text-accent:hover {
+  color: #f6978e;
+  text-decoration: underline;
+}
+
+
+.table-accent {
+  background-color: #6b5b95 !important;
+}
+
+
+.flat-table {
+  border: none;
+  box-shadow: none;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #e9ecef;
+}
+
+
+.bg-light-orange {
+  background-color: #fff1e6;
+}

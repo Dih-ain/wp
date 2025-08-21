@@ -19,82 +19,110 @@
 
     <link rel="stylesheet" href="assets/css/styles.css">  
 </head>
-<body>
+<body class="bg-light-orange">
+  <!-- Navbar -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark topbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-accent">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="assets/images/SkillSwap_logo.png" alt="SkillSwap logo" width="28" height="28"><span class="brand-text">SkillSwap</span>
+          <img src="assets/images/SkillSwap_logo.png" alt="SkillSwap Logo" height="40">
         </a>
-
-        <!--Nonsense that needs to be simplified-->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="mainNav">
+        <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav me-auto">
             <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link active" href="skills.html">All Skills</a></li>
             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="add.html">Add Skill</a></li>
           </ul>
-          <form class="d-none d-lg-block">
-            <div class="input-group">
-              <span class="input-group-text"><span class="material-icons">search</span></span>
-              <input class="form-control" type="search" placeholder="Search skills...">
-            </div>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search skills...">
+            <button class="btn btn-light" type="submit"><span class="material-icons">search</span></button>
           </form>
         </div>
       </div>
     </nav>
   </header>
 
-  <!--Nonsense that needs to be simplified--> 
-
-  <main id="content" class="flex-grow-1">
-    <section class="py-4 bg-soft">
-      <div class="container">
-        <h1 class="display-6">All Skills</h1>
+  <!-- Main -->
+  <main class="container my-5">
+    <h2 class="mb-4">All Skills</h2>
+    <div class="row align-items-start">
+      <!-- Left banner -->
+      <div class="col-lg-4 mb-4">
+        <img src="assets/images/skills_banner.png" alt="Skills Banner" class="img-fluid">
       </div>
-    </section>
 
-    <section class="py-4">
-      <div class="container">
-        <div class="row g-4 align-items-start">
-          <div class="col-12 col-lg-4">
-            <img src="assets/images/skills_banner.jpg" alt="Skills collage" class="img-fluid rounded-4 shadow-sm w-100">
-          </div>
-          <div class="col-12 col-lg-8">
-            <div class="table-responsive rounded-4 shadow-sm">
-              <table class="table table-hover align-middle mb-0">
-                <thead class="table-accent text-white">
-                  <tr>
-                    <th scope="col">Title</th>
-                    <th scope="col">Category</th>
-                    <th scope="col">Level</th>
-                    <th scope="col">Rate ($/hr)</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><th scope="row"><a href="#">Beginner Guitar Lessons</a></th><td>Music</td><td>Beginner</td><td>30.00</td></tr>
-                  <tr><th scope="row"><a href="#">Intermediate Fingerstyle</a></th><td>Music</td><td>Intermediate</td><td>45.00</td></tr>
-                  <tr><th scope="row"><a href="#">Artisan Bread Baking</a></th><td>Cooking</td><td>Beginner</td><td>25.00</td></tr>
-                  <tr><th scope="row"><a href="#">French Pastry Making</a></th><td>Cooking</td><td>Expert</td><td>50.00</td></tr>
-                  <tr><th scope="row"><a href="#">Watercolor Basics</a></th><td>Art</td><td>Beginner</td><td>20.00</td></tr>
-                  <tr><th scope="row"><a href="#">Digital Illustration with Procreate</a></th><td>Art</td><td>Intermediate</td><td>40.00</td></tr>
-                  <tr><th scope="row"><a href="#">Morning Vinyasa Flow</a></th><td>Wellness</td><td>Intermediate</td><td>35.00</td></tr>
-                  <tr><th scope="row"><a href="#">Intro to PHP &amp; MySQL</a></th><td>Programming</td><td>Expert</td><td>55.00</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+      <!-- Skills Table -->
+      <div class="col-lg-8">
+        <table class="table table-striped flat-table">
+          <thead class="table-accent text-white">
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Level</th>
+              <th>Rate ($/hr)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Beginner Guitar Lessons</a></td>
+              <td>Music</td>
+              <td>Beginner</td>
+              <td>30.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Intermediate Fingerstyle</a></td>
+              <td>Music</td>
+              <td>Intermediate</td>
+              <td>45.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Artisan Bread Baking</a></td>
+              <td>Cooking</td>
+              <td>Beginner</td>
+              <td>25.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">French Pastry Making</a></td>
+              <td>Cooking</td>
+              <td>Expert</td>
+              <td>50.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Watercolor Basics</a></td>
+              <td>Art</td>
+              <td>Beginner</td>
+              <td>20.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Digital Illustration with Procreate</a></td>
+              <td>Art</td>
+              <td>Intermediate</td>
+              <td>40.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Morning Vinyasa Flow</a></td>
+              <td>Wellness</td>
+              <td>Intermediate</td>
+              <td>35.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Intro to PHP &amp; MySQL</a></td>
+              <td>Programming</td>
+              <td>Expert</td>
+              <td>55.00</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="mt-auto footer-grad">
-    <div class="container py-4 text-center small">&copy; 2025 John Finnigan.</div>
+    <div class="container py-4 text-center small">&copy; 2025 Dihain Karu.</div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

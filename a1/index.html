@@ -19,32 +19,27 @@
 
     <link rel="stylesheet" href="assets/css/styles.css">  
 </head>
-<body>
+<body class="bg-light-orange">
+  <!-- Navbar -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark topbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-accent">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="assets/images/SkillSwap_logo.png" alt="SkillSwap logo" width="28" height="28">
-          <span class="brand-text">SkillSwap</span>
+          <img src="assets/images/SkillSwap_logo.png" alt="SkillSwap Logo" height="40">
         </a>
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <div class="collapse navbar-collapse" id="mainNav">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="skills.html">All Skills</a></li>
             <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
             <li class="nav-item"><a class="nav-link" href="add.html">Add Skill</a></li>
           </ul>
-
-          <form class="d-none d-lg-block">
-            <div class="input-group">
-              <span class="input-group-text"><span class="material-icons">search</span></span>
-              <input class="form-control" type="search" placeholder="Search skills...">
-            </div>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search skills...">
+            <button class="btn btn-light" type="submit"><span class="material-icons">search</span></button>
           </form>
         </div>
       </div>
@@ -100,57 +95,40 @@
     </section>
 
     <!-- Skill cards -->
-    <section class="pb-5">
-      <div class="container">
-        <div class="row g-4">
-          <!-- Repeatable card item (4 shown like your mock) -->
-          <div class="col-12 col-sm-6 col-lg-3">
-            <article class="card h-100 shadow-sm skill-card">
-              <div class="card-body">
-                <h3 class="h5 card-title"><a href="skills.html" class="stretched-link link-body-emphasis">Intro to PHP &amp; MySQL</a></h3>
-                <p class="small text-muted mb-2">Rate: $55.00/hr</p>
-                <a class="btn btn-accent btn-sm" href="skills.html">View Details</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <article class="card h-100 shadow-sm skill-card">
-              <div class="card-body">
-                <h3 class="h5 card-title"><a href="skills.html" class="stretched-link link-body-emphasis">Intermediate Fingerstyle</a></h3>
-                <p class="small text-muted mb-2">Rate: $45.00/hr</p>
-                <a class="btn btn-accent btn-sm" href="skills.html">View Details</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <article class="card h-100 shadow-sm skill-card">
-              <div class="card-body">
-                <h3 class="h5 card-title"><a href="skills.html" class="stretched-link link-body-emphasis">Artisan Bread Baking</a></h3>
-                <p class="small text-muted mb-2">Rate: $25.00/hr</p>
-                <a class="btn btn-accent btn-sm" href="skills.html">View Details</a>
-              </div>
-            </article>
-          </div>
-
-          <div class="col-12 col-sm-6 col-lg-3">
-            <article class="card h-100 shadow-sm skill-card">
-              <div class="card-body">
-                <h3 class="h5 card-title"><a href="skills.html" class="stretched-link link-body-emphasis">French Pastry Making</a></h3>
-                <p class="small text-muted mb-2">Rate: $50.00/hr</p>
-                <a class="btn btn-accent btn-sm" href="skills.html">View Details</a>
-              </div>
-            </article>
-          </div>
-        </div>
+<section class="pb-5">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <h3 class="h6"><a href="skills.html" class="skill-link">Intro to PHP &amp; MySQL</a></h3>
+        <p class="small">Rate: $55.00/hr</p>
+        <a class="btn btn-accent" href="skills.html">View Details</a>
       </div>
-    </section>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <h3 class="h6"><a href="skills.html" class="skill-link">Intermediate Fingerstyle</a></h3>
+        <p class="small">Rate: $45.00/hr</p>
+        <a class="btn btn-accent" href="skills.html">View Details</a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <h3 class="h6"><a href="skills.html" class="skill-link">Artisan Bread Baking</a></h3>
+        <p class="small">Rate: $25.00/hr</p>
+        <a class="btn btn-accent" href="skills.html">View Details</a>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-3 mb-4">
+        <h3 class="h6"><a href="skills.html" class="skill-link">French Pastry Making</a></h3>
+        <p class="small">Rate: $50.00/hr</p>
+        <a class="btn btn-accent" href="skills.html">View Details</a>
+      </div>
+    </div>
+  </div>
+</section>
   </main>
 
   <footer class="mt-auto border-0 footer-grad">
     <div class="container py-4 text-center small">
-      <span>&copy; 2025 John Finnigan. All rights reserved.</span>
+      <span>&copy; 2025 Dihain Karu. All rights reserved.</span>
     </div>
   </footer>
 
