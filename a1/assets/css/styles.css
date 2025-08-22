@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 .footer-grad{
-  background: linear-gradient(180deg, rgba(246,151,142,.35), rgba(205,79,7,.85));
+  background: linear-gradient(90deg, rgba(205,79,7,.85), rgba(246,151,142,.35));
   color:#fff;
 }
 
@@ -127,4 +127,7 @@ a.gallery-link:focus-visible{outline:3px solid var(--primary); outline-offset:4p
 .skills-table .text-accent:hover {
   color: #4d3f70; /* a slightly darker shade for hover */
   text-decoration: underline;
+}
+.carousel-img-wrapper {
+  height: 400px;
 }
