@@ -102,10 +102,7 @@ a.gallery-link:focus-visible{outline:3px solid var(--primary); outline-offset:4p
 }
 
 
-.flat-table {
-  border: none;
-  box-shadow: none;
-}
+
 
 .table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #f8f9fa;
@@ -116,7 +113,7 @@ a.gallery-link:focus-visible{outline:3px solid var(--primary); outline-offset:4p
 
 
 .bg-light-orange {
-  background-color: #fff1e6;
+  background-color: #fff5f8;
 }
 
 .skills-table .text-accent {
