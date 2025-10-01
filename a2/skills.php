@@ -1,0 +1,134 @@
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillSwap</title>
+  <link rel="stylesheet" href="css/styles.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google open sans font(s) -->
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
+    <!-- Google Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/styles.css">  
+</head>
+<body class="bg-light-orange">
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-accent">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img src="assets/images/SkillSwap_logo.png" alt="SkillSwap Logo" height="40">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" href="skills.html">All Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="add.html">Add Skill</a></li>
+          </ul>
+          <div class="ms-lg-auto mt-3 mt-lg-0"></div>
+            <form class="d-flex" role="search">
+  <div class="input-group input-group-sm search-group">
+    <button class="btn btn-light" type="submit"><span class="material-icons">search</span></button>
+    <input class="form-control search-tall" type="search" placeholder="Search skills..." aria-label="Search">
+  </div>
+</form>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="container my-5">
+    <h2 class="mb-4 text-accent">All Skills</h2>
+    <div class="row">
+      <!-- Left banner -->
+      <div class="col-lg-4 mb-4">
+        <img src="assets/images/skills_banner.png" alt="Skills Banner" class="img-fluid">
+      </div>
+
+      <!-- Skills Table -->
+      <div class="col-lg-8">
+        <table class="table table-striped skills-table">
+          <thead class="table-accent text-white">
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Level</th>
+              <th>Rate ($/hr)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Beginner Guitar Lessons</a></td>
+              <td>Music</td>
+              <td>Beginner</td>
+              <td>30.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Intermediate Fingerstyle</a></td>
+              <td>Music</td>
+              <td>Intermediate</td>
+              <td>45.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Artisan Bread Baking</a></td>
+              <td>Cooking</td>
+              <td>Beginner</td>
+              <td>25.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">French Pastry Making</a></td>
+              <td>Cooking</td>
+              <td>Expert</td>
+              <td>50.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Watercolor Basics</a></td>
+              <td>Art</td>
+              <td>Beginner</td>
+              <td>20.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Digital Illustration with Procreate</a></td>
+              <td>Art</td>
+              <td>Intermediate</td>
+              <td>40.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Morning Vinyasa Flow</a></td>
+              <td>Wellness</td>
+              <td>Intermediate</td>
+              <td>35.00</td>
+            </tr>
+            <tr>
+              <td><a href="gallery.html" class="text-accent">Intro to PHP &amp; MySQL</a></td>
+              <td>Programming</td>
+              <td>Expert</td>
+              <td>55.00</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="mt-auto footer-grad">
+    <div class="container py-4 text-center small">&copy; 2025 Dihain Karu.</div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/scripts.js"></script>
+</body>
+</html>
