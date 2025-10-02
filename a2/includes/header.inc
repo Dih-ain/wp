@@ -1,6 +1,5 @@
-<?php include('includes/db_connect.inc'); ?>
-
-
+<?php 
+include('includes/db_connect.inc');?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

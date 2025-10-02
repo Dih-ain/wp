@@ -1,4 +1,5 @@
-<?php include('includes/header.inc'); ?>
+<?php include('includes/header.inc');
+include('includes/db_connect.inc');  ?>
 
 <body class = "bg-light-orange">
     

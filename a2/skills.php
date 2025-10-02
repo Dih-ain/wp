@@ -1,10 +1,17 @@
-      <?php include('includes/header.inc'); ?>
+<?php
+include('includes/db_connect.inc');
+include('includes/header.inc');
+$sql = "SELECT skill_id, title, category, level, rate_per_hr FROM skills ORDER BY created_at";
+$records = $conn->query($sql);
+$skill_id = isset($get['skill_id'])
+
+ ?>
 <body class="bg-light-orange">
   
 
   <!-- Main -->
   <main class="container my-5">
-    <h2 class="mb-4 text-accent">All Skills</h2>
+    <h1 class="mb-4 text-accent">All Skills</h1>
     <div class="row">
       <!-- Left banner -->
       <div class="col-lg-4 mb-4">
@@ -23,58 +30,25 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td><a href="details.php" class="text-accent">Beginner Guitar Lessons</a></td>
-              <td>Music</td>
-              <td>Beginner</td>
-              <td>30.00</td>
-            </tr>
-            <tr>
-              <td><a href="gallery.php" class="text-accent">Intermediate Fingerstyle</a></td>
-              <td>Music</td>
-              <td>Intermediate</td>
-              <td>45.00</td>
-            </tr>
-            <tr>
-              <td><a href="gallery.php" class="text-accent">Artisan Bread Baking</a></td>
-              <td>Cooking</td>
-              <td>Beginner</td>
-              <td>25.00</td>
-            </tr>
-            <tr>
-              <td><a href="gallery.php" class="text-accent">French Pastry Making</a></td>
-              <td>Cooking</td>
-              <td>Expert</td>
-              <td>50.00</td>
-            </tr>
-            <tr>
-              <td><a href="gallery.php" class="text-accent">Watercolor Basics</a></td>
-              <td>Art</td>
-              <td>Beginner</td>
-              <td>20.00</td>
-            </tr>
-            <tr>
-              <td><a href="gallery.php" class="text-accent">Digital Illustration with Procreate</a></td>
-              <td>Art</td>
-              <td>Intermediate</td>
-              <td>40.00</td>
-            </tr>
-            <tr>
-              <td><a href="gallery.php" class="text-accent">Morning Vinyasa Flow</a></td>
-              <td>Wellness</td>
-              <td>Intermediate</td>
-              <td>35.00</td>
-            </tr>
-            <tr>
-              <td><a href="gallery.php" class="text-accent">Intro to PHP &amp; MySQL</a></td>
-              <td>Programming</td>
-              <td>Expert</td>
-              <td>55.00</td>
-            </tr>
+
+            <?php foreach ($records as $row) {
+                        echo '<tr>';
+                        echo '<td><a href="details.php?skill_id=' . $row['skill_id'] . '" id="' . $row['skill_id'] . '" class="skillsTableLink">' . $row['title'] . '</a></td>';
+                        echo '<td>' . $row['category'] . '</td>';
+                        echo '<td>' . $row['level'] . '</td>';
+                        echo '<td>' . $row['rate_per_hr'] . '</td>';
+                        echo '</tr>';
+
+                    }
+            ?>
+            
           </tbody>
         </table>
       </div>
     </div>
   </main>
 
+  
       <?php include('includes/footer.inc'); ?>
+
+      

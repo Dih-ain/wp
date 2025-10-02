@@ -1,6 +1,6 @@
 <?php
 //db_connect.inc
-session_start();
+
 
 //Check what server you are accessing
 if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
@@ -25,12 +25,4 @@ if ($conn->connect_error) {
   //echo "Database connected, good to go!";
 }
 
-function preshow($var) {
-  echo '<pre>';
-  if (empty($var)) {
-    echo 'No data here';
-  } else {
-    print_r($var);
-  }
-  echo '</pre>';
-}
+
