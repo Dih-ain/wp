@@ -1,56 +1,6 @@
-  <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkillSwap</title>
-  <link rel="stylesheet" href="css/styles.css">
-    <!-- Latest compiled and minified CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Latest compiled JavaScript -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Google open sans font(s) -->
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Ysabeau+SC:wght@1..1000&display=swap" rel="stylesheet">
-    <!-- Google Material Icons -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/styles.css">  
-</head>
+    <?php include('includes/header.inc'); ?>
 <body class="bg-light-orange">
-  <!-- Navbar -->
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-accent">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="assets/images/SkillSwap_logo.png" alt="SkillSwap Logo" height="40">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- nav links aligned left -->
-          <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="skills.html">All Skills</a></li>
-            <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-            <li class="nav-item"><a class="nav-link" href="add.html">Add Skill</a></li>
-          </ul>
-          <!-- search aligned right -->
-          <div class="ms-lg-auto mt-3 mt-lg-0">
-            <form class="d-flex" role="search">
-  <div class="input-group input-group-sm search-group">
-    <button class="btn btn-light" type="submit"><span class="material-icons">search</span></button>
-    <input class="form-control search-tall" type="search" placeholder="Search skills..." aria-label="Search">
-  </div>
-</form>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
+
 
   <main id="content">
     <section class="py-4">
@@ -113,40 +63,31 @@
       <div class="container">
         <div class="row text-center">
           <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <h3 class="h6"><a href="skills.html" class="skill-link">Intro to PHP &amp; MySQL</a></h3>
+            <h3 class="h6"><a href="skills.php" class="skill-link">Intro to PHP &amp; MySQL</a></h3>
             <p class="small">Rate: $55.00/hr</p>
-            <a class="btn btn-accent" href="skills.html">View Details</a>
+            <a class="btn btn-accent" href="skills.php">View Details</a>
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <h3 class="h6"><a href="skills.html" class="skill-link">Intermediate Fingerstyle</a></h3>
+            <h3 class="h6"><a href="skills.php" class="skill-link">Intermediate Fingerstyle</a></h3>
             <p class="small">Rate: $45.00/hr</p>
-            <a class="btn btn-accent" href="skills.html">View Details</a>
+            <a class="btn btn-accent" href="skills.php">View Details</a>
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <h3 class="h6"><a href="skills.html" class="skill-link">Artisan Bread Baking</a></h3>
+            <h3 class="h6"><a href="skills.php" class="skill-link">Artisan Bread Baking</a></h3>
             <p class="small">Rate: $25.00/hr</p>
-            <a class="btn btn-accent" href="skills.html">View Details</a>
+            <a class="btn btn-accent" href="skills.php">View Details</a>
           </div>
 
           <div class="col-12 col-sm-6 col-lg-3 mb-4">
-            <h3 class="h6"><a href="skills.html" class="skill-link">French Pastry Making</a></h3>
+            <h3 class="h6"><a href="skills.php" class="skill-link">French Pastry Making</a></h3>
             <p class="small">Rate: $50.00/hr</p>
-            <a class="btn btn-accent" href="skills.html">View Details</a>
+            <a class="btn btn-accent" href="skills.php">View Details</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="mt-auto border-0 footer-grad">
-    <div class="container py-4 text-center small">
-      <span>&copy; 2025 Dihain Karu. All rights reserved.</span>
-    </div>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  <script src="assets/js/scripts.js"></script>
-</body>
-</html>
+      <?php include('includes/footer.inc'); ?>
