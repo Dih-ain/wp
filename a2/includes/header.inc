@@ -21,4 +21,5 @@ include('includes/db_connect.inc');?>
 
     <link rel="stylesheet" href="assets/css/styles.css">  
 </head>
+<body>
 <?php include('includes/nav.inc'); ?>

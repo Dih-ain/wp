@@ -1,6 +1,7 @@
 <?php include('includes/header.inc');
-include('includes/db_connect.inc'); ?>
-<body class = "bg-light-orange">
+include('includes/db_connect.inc');
+include('process_add.php'); ?>
+
 
     <main class="main-content">
         <div class="container">
@@ -9,7 +10,8 @@ include('includes/db_connect.inc'); ?>
                     <div class="form-container">
                         <h1 class="page-title text-accent">Add New Skill</h1>
                         
-                        <form id="addSkillForm" novalidate>
+                        <form id="addSkillForm" method="post" action="add.php" enctype="multipart/form-data" novalidate>
+                            
                             <!-- Title Field -->
                             <div class="form-group">
                                 <label for="title" class="form-label">Title *</label>
@@ -78,12 +80,12 @@ include('includes/db_connect.inc'); ?>
 
                             <!-- Skill Image Field -->
                             <div class="form-group">
-                                <label for="skillImage" class="form-label">Skill Image *</label>
+                                <label for="image" class="form-label">Skill Image *</label>
                                 <div class="file-input-wrapper">
                                     <input type="file" 
                                            class="form-control form-input file-input" 
-                                           id="skillImage" 
-                                           name="skillImage"
+                                           id="image" 
+                                           name="image"
                                            accept=".jpg,.jpeg,.png,.gif,.webp" 
                                            required>
 

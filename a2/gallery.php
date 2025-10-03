@@ -1,8 +1,6 @@
 <?php include('includes/header.inc');
 include('includes/db_connect.inc');  ?>
-
-<body class = "bg-light-orange">
-    
+   
   
   <!-- Main -->
   <main class="container my-5">
@@ -12,61 +10,17 @@ include('includes/db_connect.inc');  ?>
 
  <div class="row g-4" id="skillsGrid">
 
-<div class="col-lg-3 col-md-4 col-6 col-sm-12">
-        <a href="#" class="gallery-link" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-image="assets/images/skills/1.png">
-          <img src="assets/images/skills/1.png" class="img-fluid" alt="Skill 1">
-        </a>
-        <p class="mt-2 fw-bold">Beginner Guitar Lessons</p>
-      </div>
-
-<div class="col-lg-3 col-md-4 col-6">
-        <a href="#" class="gallery-link" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-image="assets/images/skills/2.png">
-          <img src="assets/images/skills/2.png" class="img-fluid" alt="Skill 2">
-        </a>
-        <p class="mt-2 fw-bold">Intermediate Fingerstyle</p>
-      </div>
-
-<div class="col-lg-3 col-md-4 col-6">
-        <a href="#" class="gallery-link" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-image="assets/images/skills/3.png">
-          <img src="assets/images/skills/3.png" class="img-fluid" alt="Skill 3">
-        </a>
-        <p class="mt-2 fw-bold">Artisan Bread Baking</p>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="#" class="gallery-link" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-image="assets/images/skills/4.png">
-          <img src="assets/images/skills/4.png" class="img-fluid" alt="Skill 4">
-        </a>
-        <p class="mt-2 fw-bold">French Pastry Making</p>
-      </div>
-      
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="#" class="gallery-link" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-image="assets/images/skills/5.png">
-          <img src="assets/images/skills/5.png" class="img-fluid" alt="Skill 5">
-        </a>
-        <p class="mt-2 fw-bold">Watercolor Basics</p>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="#" class="gallery-link" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-image="assets/images/skills/6.png">
-          <img src="assets/images/skills/6.png" class="img-fluid" alt="Skill 6">
-        </a>
-        <p class="mt-2 fw-bold">Digital Illustration With Procreate</p>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="#" class="gallery-link" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-image="assets/images/skills/7.png">
-          <img src="assets/images/skills/7.png" class="img-fluid" alt="Skill 7">
-        </a>
-        <p class="mt-2 fw-bold">Morning Vinyasa Flow</p>
-      </div>
-
-      <div class="col-lg-3 col-md-4 col-6">
-        <a href="#" class="gallery-link" data-bs-toggle="modal" data-bs-target="#galleryModal" data-bs-image="assets/images/skills/8.png">
-          <img src="assets/images/skills/8.png" class="img-fluid" alt="Skill 8">
-        </a>
-        <p class="mt-2 fw-bold">Intro To PHP & MySQL</p>
-      </div>
+      <?php
+      $result = $conn->query("SELECT skill_id, title, image_path FROM skills ORDER BY created_at DESC");
+      while ($row = $result->fetch_assoc()) {
+        echo <<< CDATA
+        <div class="col-md-3 col-sm-6 text-center">
+          <img src="{$row['image_path']}" class="img-fluid rounded img-slight-shadow gallery-img" alt="{$row['title']}">
+          <p class="mt-2 fw-bold"><a href="details.php?id={$row['skill_id']}">{$row['title']}</a></p>
+        </div>
+        CDATA;
+      }
+      ?>
             </div>
         </div>
     </main>

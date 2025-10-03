@@ -1,5 +1,5 @@
 <?php
-//db_connect.inc
+//db_connect.inc\
 
 
 //Check what server you are accessing

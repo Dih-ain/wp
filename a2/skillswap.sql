@@ -25,7 +25,7 @@ level        ENUM('Beginner','Intermediate','Expert') NOT NULL DEFAULT 'Intermed
 created_at   DATETIME      NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB;
 
-INSERT IGNORE INTO skills
+INSERT INTO skills
 (title, description, category, image_path, rate_per_hr, level)
 VALUES
 ('Beginner Guitar Lessons', 'description', 'Music', 'assests/images/skills/1.png', 30.00, 'Beginner'),
@@ -35,4 +35,4 @@ VALUES
 ('Watercolour Basics', 'description', 'Art', 'assests/images/skills/5.png', 20.00, 'Intermediate'),
 ('Digital Illustration with Procreate', 'description', 'Art', 'assests/images/skills/6.png', 40.00, 'Intermediate'),
 ('Morning Vinyasa Flow', 'description', 'Wellness', 'assests/images/skills/7.png', 35.00, 'Intermediate'),
-('Intro to PHP & MySQL', 'description', 'Programming', 'assests/images/skills/8.png', 55.00, 'Expert'),
+('Intro to PHP & MySQL', 'description', 'Programming', 'assests/images/skills/8.png', 55.00, 'Expert');

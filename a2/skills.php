@@ -1,4 +1,5 @@
 <?php
+$title = "Skills";
 include('includes/db_connect.inc');
 include('includes/header.inc');
 $sql = "SELECT skill_id, title, category, level, rate_per_hr FROM skills ORDER BY created_at";
@@ -6,7 +7,7 @@ $records = $conn->query($sql);
 $skill_id = isset($get['skill_id'])
 
  ?>
-<body class="bg-light-orange">
+ 
   
 
   <!-- Main -->
@@ -30,18 +31,17 @@ $skill_id = isset($get['skill_id'])
             </tr>
           </thead>
           <tbody>
-
-            <?php foreach ($records as $row) {
+<?php
+            foreach ($records as $row) {
                         echo '<tr>';
-                        echo '<td><a href="details.php?skill_id=' . $row['skill_id'] . '" id="' . $row['skill_id'] . '" class="skillsTableLink">' . $row['title'] . '</a></td>';
+                        echo '<td><a href="details.php?id=' . $row['skill_id'] . '" id="' . $row['skill_id'] . '" class="skillsTableLink">' . $row['title'] . '</a></td>';
                         echo '<td>' . $row['category'] . '</td>';
                         echo '<td>' . $row['level'] . '</td>';
                         echo '<td>' . $row['rate_per_hr'] . '</td>';
                         echo '</tr>';
 
                     }
-            ?>
-            
+                    ?>
           </tbody>
         </table>
       </div>
