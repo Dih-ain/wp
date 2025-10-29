@@ -1,0 +1,133 @@
+:root{
+  --primary:#cd4f07;
+  --secondary:#6b5b95;
+  --soft:#fff5f8;
+  --text:#333333;
+  --grad:#f6978e;
+}
+
+body {
+  font-family: 'Ysabeau SC', sans-serif;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.skill-link {
+  color: #cd4f07;
+  text-decoration: none;
+}
+.skill-link:hover {
+  text-decoration: underline;
+}
+
+.btn-accent {
+  background: #cd4f07;
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 18px;
+  font-size: 0.9rem;
+  border: none;
+}
+.btn-accent:hover {
+  background: #f6978e;
+  color: #fff;
+}
+
+.topbar{
+  background-color:var(--primary);
+}
+.topbar .nav-link,
+.topbar .navbar-brand{color:#fff;}
+.topbar .nav-link.active,
+.topbar .nav-link:hover{opacity:.9;color:#fff;}
+
+.brand-text{font-weight:700; letter-spacing:.3px;}
+
+.bg-soft{background-color:var(--soft);}
+.section-title{font-size:1.75rem; margin-bottom:1rem;}
+
+.search-input{
+  border-radius:999px 0 0 999px;
+  border:0;
+  padding-left:.9rem;
+}
+.btn-search{
+  border-radius:0 999px 999px 0;
+  background:#fff; color:var(--primary);
+  border:0;
+}
+.btn-search .material-icons{vertical-align:middle;}
+
+.skill-card{border:0;}
+
+.btn-outline-accent{color:var(--primary); border-color:var(--primary);}
+.btn-outline-accent:hover{background:var(--primary); color:#fff;}
+
+.table-accent{background:var(--secondary);}
+.table a{color:var(--primary); text-decoration:none;}
+.table a:hover{text-decoration:underline;}
+
+
+.footer-grad{
+  background: linear-gradient(90deg, rgba(205,79,7,.85), rgba(246,151,142,.35));
+  color:#fff;
+}
+
+
+a.gallery-link:focus-visible{outline:3px solid var(--primary); outline-offset:4px;}
+
+
+.card .small{font-size:.85rem;}
+
+
+.bg-accent {
+  background-color: #cd4f07 !important;
+}
+
+
+.text-accent {
+  color: #cd4f07;
+  text-decoration: none;
+}
+.text-accent:hover {
+  color: #f6978e;
+  text-decoration: underline;
+}
+
+
+
+.table-accent {
+  background-color: #6b5b95 !important;
+}
+
+
+.skillstable{
+  text-decoration: none;
+  color: #6b5b95;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #f8f9fa;
+}
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #e9ecef;
+}
+
+
+.bg-light-orange {
+  background-color: #fff5f8;
+}
+
+.skills-table .text-accent {
+  color: #6b5b95;
+  text-decoration: none;
+}
+
+.skills-table .text-accent:hover {
+  color: #4d3f70; /* a slightly darker shade for hover */
+  text-decoration: underline;
+}
+.carousel-img-wrapper {
+  height: 400px;
+}
