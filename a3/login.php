@@ -8,7 +8,7 @@ include('includes/db_connect.inc');
   <h2>Login</h2>
   <form action="process_login.php" method="POST">
     <div class="mb-3">
-      <label for="username" class="form-label">username</label>
+      <label for="username" class="form-label">Username</label>
       <input type="username" class="form-control" name="username" required>
     </div>
     <div class="mb-3">

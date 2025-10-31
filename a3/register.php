@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $title = "Register";
 include('includes/header.inc');
 include('includes/db_connect.inc');
@@ -12,7 +13,7 @@ include('process_register.php');
                 <div class="form-container">
                     <h1 class="page-title text-accent">Create Account</h1>
                     
-                    <form id="registerForm" method="post" action="register.php" class="needs-validation" novalidate>
+                    <form id="registerForm" method="post" action="register.php" enctype="multipart/form-data" novalidate>
                         
                         <!-- Username Field -->
                         <div class="form-group mb-3">
@@ -92,3 +93,4 @@ include('process_register.php');
 </main>
 
 <?php include('includes/footer.inc'); ?>
+

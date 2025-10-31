@@ -1,4 +1,5 @@
 <?php 
+session_start();
 $title = "Edit Skill";
 include('includes/header.inc');
 include('includes/db_connect.inc');
@@ -54,7 +55,7 @@ include('process_edit.php');
                 <div class="form-container">
                     <h1 class="page-title text-accent">Edit Skill</h1>
                     
-                    <form id="editSkillForm" method="post" action="edit.php?id=<?php echo $skill_id; ?>" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    <form id="editSkillForm" method="post" action="edit.php?id=<?php echo $skill_id; ?>" enctype="multipart/form-data" novalidate>
                         
                         <!-- Title Field -->
                         <div class="form-group mb-3">

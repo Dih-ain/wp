@@ -247,23 +247,15 @@ main {
 }
 
 .badge-beginner {
-  background-color: #28a745;
-  color: white;
+  color: #333333;
 }
 
 .badge-intermediate {
-  background-color: #ffc107;
-  color: #333;
-}
-
-.badge-advanced {
-  background-color: #fd7e14;
-  color: white;
+  color: #333333;
 }
 
 .badge-expert {
-  background-color: #dc3545;
-  color: white;
+  color: #333333;
 }
 
 /* Footer */

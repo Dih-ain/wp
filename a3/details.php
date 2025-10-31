@@ -52,7 +52,7 @@ $is_owner = isset($_SESSION['user_id']) && $_SESSION['user_id'] == $current_skil
                     <p class="mt-3"><span class="detail-label">Category:</span> <?php echo htmlspecialchars($current_skill['category']); ?></p>
                     
                     <p><span class="detail-label">Level:</span> 
-                        <span class="badge badge-<?php echo strtolower($current_skill['level']); ?>">
+                        <span class="badge-<?php echo strtolower($current_skill['level']); ?>">
                             <?php echo htmlspecialchars($current_skill['level']); ?>
                         </span>
                     </p>
