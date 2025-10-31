@@ -1,4 +1,5 @@
 <?php
+session_start();
 $title = "Skills";
 include('includes/db_connect.inc');
 include('includes/header.inc');

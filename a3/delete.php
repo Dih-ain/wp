@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 $title = "Delete Skill";
 include('includes/header.inc');
 include('includes/db_connect.inc');

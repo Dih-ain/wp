@@ -1,6 +1,5 @@
 <?php
-//db_connect.inc\
-
+//db_connect.inc
 
 //Check what server you are accessing
 if (strstr($_SERVER['SERVER_NAME'], 'localhost')) {
@@ -25,4 +24,6 @@ if ($conn->connect_error) {
   //echo "Database connected, good to go!";
 }
 
-
+// Set charset to utf8mb4
+$conn->set_charset("utf8mb4");
+?>

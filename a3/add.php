@@ -1,4 +1,6 @@
-<?php include('includes/header.inc');
+<?php 
+session_start();
+include('includes/header.inc');
 include('includes/db_connect.inc');
 include('process_add.php'); ?>
 

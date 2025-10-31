@@ -1,43 +1,24 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['username'])) {
-    
-    $username = trim($_POST['username']);
-    $password = $_POST['password'];
-    
-    if (empty($username) || empty($password)) {
-        $_SESSION['flash_message'] = 'Please provide both username/email and password.';
-        $_SESSION['flash_type'] = 'danger';
-    } else {
-        // Check if user exists by username or email
-        $stmt = $conn->prepare("SELECT user_id, username, password FROM users WHERE username = ? OR email = ?");
-        $stmt->bind_param("ss", $username, $username);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        
-        if ($result->num_rows === 1) {
-            $user = $result->fetch_assoc();
-            
-            // Verify password
-            if (password_verify($password, $user['password'])) {
-                // Login successful
-                $_SESSION['user_id'] = $user['user_id'];
-                $_SESSION['username'] = $user['username'];
-                $_SESSION['flash_message'] = 'Welcome back, ' . htmlspecialchars($user['username']) . '!';
-                $_SESSION['flash_type'] = 'success';
-                
-                $stmt->close();
-                header("Location: index.php");
-                exit();
-            } else {
-                $_SESSION['flash_message'] = 'Invalid username/email or password.';
-                $_SESSION['flash_type'] = 'danger';
-            }
-        } else {
-            $_SESSION['flash_message'] = 'Invalid username/email or password.';
-            $_SESSION['flash_type'] = 'danger';
-        }
-        
-        $stmt->close();
-    }
+include('includes/db_connect.inc');
+session_start();
+
+$username = trim($_POST['username']);
+$password = trim($_POST['password']);
+
+$stmt = mysqli_prepare($conn,'SELECT user_id,password FROM users WHERE username=?');
+mysqli_stmt_bind_param( $stmt,'s', $username);
+mysqli_stmt_execute($stmt);
+mysqli_stmt_bind_result($stmt,$user_id, $hash);
+mysqli_stmt_fetch($stmt);
+
+if($user_id && password_verify($password, $hash)){
+    $_SESSION['user_id'] = $user_id;
+    $_SESSION['username'] = $username;
+    $_SESSION['flash_message'] = "Logged in Successfully as: ".$username.'.';
+    header('Location: index.php');
+    exit();
+}else{
+    $_SESSION['flash_error'] = "Failed to login. Please check username and password.";
+    header('Location: login.php');
+    exit();
 }
-?>

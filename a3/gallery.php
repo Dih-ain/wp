@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start();
 $title = "Gallery";
 include('includes/header.inc');
 include('includes/db_connect.inc');
